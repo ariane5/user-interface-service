@@ -56,6 +56,7 @@ public class UserInterface {
                 System.out.println("Enter the user id: ");
                 String userId = reader.readLine();
                 getUserDetail(Integer.parseInt(userId));
+
                 System.out.println("---------------------------------------------");
                 System.out.println("Press 20 to Edit the user personal info");
                 System.out.println("Press 21 to Create new measure detail");
@@ -65,6 +66,7 @@ public class UserInterface {
                 switch (getUserChoice) {
                     case "20":
                         updateUser(Integer.parseInt(userId));
+                        System.out.println("---------------------------------------------");
                         System.out.println("User Successfully Updated!!!!");
                         break;
                     case "21":
@@ -87,7 +89,7 @@ public class UserInterface {
                         else if (readMeasureDetail.equals("221")) {
                             updateUserMeasure(Integer.parseInt(userId));
                         }
-                        getUserDetail(Integer.parseInt(userId));
+//                        getUserDetail(Integer.parseInt(userId));
                         break;
                     default:
                         break;
@@ -97,6 +99,7 @@ public class UserInterface {
 
             case "3":
                 int newUserId = createUser();
+                System.out.println("---------------------------------------------");
                 System.out.println("Press 30 to go to user profile");
                 String createRedirect = reader.readLine();
                 if (createRedirect.equals("30")){
@@ -126,10 +129,14 @@ public class UserInterface {
 
     public static void getListOfUser() throws Exception {
         List<User> userList = UserImplementation.getListOfUser();
-        System.out.println(userList.get(0).getFirstName());
-        for (User user: userList) {
-            printUserInfo(user);
-            getUserHealthProfile(user);
+        if (userList == null) {
+            System.out.println("There are no Users in this system!!!!");
+        }
+        else {
+            for (User user : userList) {
+                printUserInfo(user);
+                getUserHealthProfile(user);
+            }
         }
     }
 
@@ -139,7 +146,12 @@ public class UserInterface {
 
     public static void getUserDetail(int id) throws Exception {
         User user = UserImplementation.getUserDetail(id);
-        printUserDetails(user);
+        if (user == null) {
+            System.out.println("User Not Found!!!!");
+        }
+        else {
+            printUserDetails(user);
+        }
     }
 
      /* Request to obtain all measure details about a measure of a user in the list.
@@ -149,7 +161,12 @@ public class UserInterface {
 
     public static void getUserHistory(int uId, String measureType) throws Exception {
         List<HealthMeasureHistory> healthMeasureHistory = UserImplementation.getUserHistory(uId, measureType);
-        printUserHealthMeasureHistory(healthMeasureHistory);
+        if (healthMeasureHistory == null) {
+            System.out.println("Health Measure History is empty!!!");
+        }
+        else {
+            printUserHealthMeasureHistory(healthMeasureHistory);
+        }
     }
 
      /*  Request to obtain measure details about a particular measure of a user in the list.
@@ -160,8 +177,14 @@ public class UserInterface {
 
     public static List<HealthMeasureHistory> getUserMeasure(int uId, String measureType, int hmhId) throws Exception {
         List<HealthMeasureHistory> healthMeasureHistory = UserImplementation.getUserMeasure(uId, measureType, hmhId);
-        printUserHealthMeasureHistory(healthMeasureHistory);
-        return healthMeasureHistory;
+        if (healthMeasureHistory == null) {
+            System.out.println("Health Measure History is empty!!!");
+            return null;
+        }
+        else {
+            printUserHealthMeasureHistory(healthMeasureHistory);
+            return healthMeasureHistory;
+        }
     }
 
     /*  Request to add a new user in the list.
@@ -378,6 +401,14 @@ public class UserInterface {
         }
     }
 
+    /*  Request to update measure details about a measure of a user in the list.
+        Expected Input: uId (Integer)
+        measureType (String)
+        hmhId (Integer)
+        MeasureDetails (Object)
+        Expected Output:
+        List of updated measure. (Object) */
+
     public static void updateUserMeasure(int uId) throws Exception {
         System.out.println("*********************************************");
         System.out.println("                Update Measure               ");
@@ -478,7 +509,7 @@ public class UserInterface {
         System.out.println("*********************************************");
         System.out.println("             THOUGHT OF THE DAY              ");
         System.out.println("---------------------------------------------");
-//        System.out.println(user.getQuote());
+        System.out.println(user.getQuote());
         System.out.println("*********************************************");
         System.out.println("Details for user with UID : " + user.getuId());
         System.out.println("---------------------------------------------");
@@ -502,18 +533,18 @@ public class UserInterface {
         }
         System.out.println("---------------------------------------------");
         System.out.println("You should try this new recepie... ");
-//        FoodSuggestion foodSuggestion = user.getFoodSuggestion();
-//        System.out.println(foodSuggestion.getLabel().toUpperCase());
-//        System.out.println("To make this, all you need is: ");
-//        ArrayList<String> ingredients = foodSuggestion.getIngredientLines();
-//        for (String ingredient: ingredients) {
-//            System.out.println("\t" + ingredient);
-//        }
-//        System.out.println("This recepie is good for your health since it is...");
-//        ArrayList<String> healthLabels = foodSuggestion.getHealthLabels();
-//        for (String healthLabel: healthLabels) {
-//            System.out.println("\t" + healthLabel);
-//        }
+        FoodSuggestion foodSuggestion = user.getFoodSuggestion();
+        System.out.println(foodSuggestion.getLabel().toUpperCase());
+        System.out.println("To make this, all you need is: ");
+        ArrayList<String> ingredients = foodSuggestion.getIngredientLines();
+        for (String ingredient: ingredients) {
+            System.out.println("\t" + ingredient);
+        }
+        System.out.println("This recepie is good for your health since it is...");
+        ArrayList<String> healthLabels = foodSuggestion.getHealthLabels();
+        for (String healthLabel: healthLabels) {
+            System.out.println("\t" + healthLabel);
+        }
         System.out.println("You should definitely try this!!!!");
     }
 

@@ -142,7 +142,7 @@ public class UserImplementation {
         hmhId (Integer)
         MeasureDetails (Object)
         Expected Output:
-        List of updated measure. (String) */
+        List of updated measure. (Object) */
 
     public static List<HealthMeasureHistory> updateUserMeasure(int uId, String measuretype, HealthMeasureHistory healthMeasureHistoryDetails, int hmhId) throws Exception {
         responseProcess = serviceProcess.path(uId + "/" + measuretype + "/" + hmhId).request().accept(MediaType.APPLICATION_JSON).put(Entity.json(healthMeasureHistoryDetails));
