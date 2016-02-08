@@ -24,48 +24,86 @@ public class UserInterface {
         System.out.println("*********************************************");
         System.out.println("    WELCOME TO HEART MONITORING SYSTEM!!!!   ");
         System.out.println("*********************************************");
-        System.out.println("Press 1 to view the list of all the users.");
-        System.out.println("Press 2 to log in with your id.");
-        System.out.println("Press 3 to create a new user.");
-        System.out.println("Press 4 to delete a user.");
+        System.out.println("Press 1 to View the list of all the users (Admin View).");
+        System.out.println("Press 2 to Log in with your id.");
+        System.out.println("Press 3 to Create a new user.");
+        System.out.println("Press 4 to Delete a user.");
         String action = reader.readLine();
         switch (action) {
             case "1":
                 System.out.println("List of all the users: ");
                 System.out.println("*********************************************");
                 getListOfUser();
+                System.out.println("---------------------------------------------");
+                System.out.println("Press 10 to Log in a user.");
+                System.out.println("Press 11 to Delete a user.");
+                String listRedirect = reader.readLine();
+                if (listRedirect.equals("10")){
+                    System.out.println("Enter User Id: ");
+                    String getFromListId = reader.readLine();
+                    getUserDetail(Integer.parseInt(getFromListId));
+                }
+                else if (listRedirect.equals("11")){
+                    System.out.println("Enter User Id: ");
+                    String deleteFromListId = reader.readLine();
+                    deleteUser(Integer.parseInt(deleteFromListId));
+                    System.out.println("Successfully deleted user with id: " + deleteFromListId);
+                }
                 printExitMessage();
                 break;
+
             case "2":
                 System.out.println("Enter the user id: ");
                 String userId = reader.readLine();
                 getUserDetail(Integer.parseInt(userId));
-                System.out.println("Press 20 to Edit the user");
-                System.out.println("Press 21 to add new measure");
+                System.out.println("---------------------------------------------");
+                System.out.println("Press 20 to Edit the user personal info");
+                System.out.println("Press 21 to Create new measure detail");
+                System.out.println("Press 22 to View measure detail");
+
                 String getUserChoice = reader.readLine();
                 switch (getUserChoice) {
                     case "20":
-                        System.out.println("Hello");
+                        updateUser(Integer.parseInt(userId));
+                        System.out.println("User Successfully Updated!!!!");
                         break;
                     case "21":
-                        System.out.println("World");
+                        createUserMeasure(Integer.parseInt(userId));
+                        getUserDetail(Integer.parseInt(userId));
+                        break;
+                    case "22":
+                        System.out.println("Enter the measure type: ");
+                        String getMeasureHistoryChoice = reader.readLine();
+                        getUserHistory(Integer.parseInt(userId), getMeasureHistoryChoice);
+                        System.out.println("---------------------------------------------");
+                        System.out.println("Press 220 to view the details of a particular measure");
+                        System.out.println("Press 221 to update a particular measure");
+                        String readMeasureDetail = reader.readLine();
+                        if (readMeasureDetail.equals("220")){
+                            System.out.println("Enter Health MeasureHistory Id: ");
+                            String readMeasureId = reader.readLine();
+                            getUserMeasure(Integer.parseInt(userId), getMeasureHistoryChoice, Integer.parseInt(readMeasureId));
+                        }
+                        else if (readMeasureDetail.equals("221")) {
+                            updateUserMeasure(Integer.parseInt(userId));
+                        }
+                        getUserDetail(Integer.parseInt(userId));
                         break;
                     default:
                         break;
                 }
                 printExitMessage();
                 break;
+
             case "3":
                 int newUserId = createUser();
-                System.out.println(newUserId);
-                printExitMessage();
-
                 System.out.println("Press 30 to go to user profile");
                 String createRedirect = reader.readLine();
                 if (createRedirect.equals("30")){
                     getUserDetail(newUserId);
                 }
                 break;
+
             case "4":
                 System.out.println("Enter the user id: ");
                 String deleteId = reader.readLine();
@@ -73,24 +111,7 @@ public class UserInterface {
                 System.out.println("Successfully deleted user with id: " + deleteId);
                 printExitMessage();
                 break;
-            case "5":
-                System.out.println("Enter the user id: ");
-                String uId = reader.readLine();
-                updateUser(Integer.parseInt(uId));
-                printExitMessage();
-                break;
-            case "6":
-                createUserMeasure();
-                break;
-            case "7":
-                updateUserMeasure();
-                break;
-            case "8":
-                getUserHistory(1, "weight");
-                break;
-            case "9":
-                getUserMeasure(1, "weight", 1);
-                break;
+
             default:
                 System.out.println("*********************************************");
                 System.out.println("Exiting from Heart Monitoring System...");
@@ -225,7 +246,6 @@ public class UserInterface {
 
         currentHealth.setMeasureType(healthProfileList);
         user.setCurrentHealth(currentHealth);
-        System.out.println(user.toString());
         UserProcess newUser = UserImplementation.createUser(user);
         System.out.println("User successfully Created!!!");
         printUserProcessInfo(newUser);
@@ -289,36 +309,143 @@ public class UserInterface {
        Expected Output:
        List of newly created measure. (Object) */
 
-    public static void createUserMeasure() throws Exception {
+    public static void createUserMeasure(int uId) throws Exception {
         System.out.println("*********************************************");
         System.out.println("             Create New Measure              ");
         System.out.println("*********************************************");
-        BufferedReader measureReader = new BufferedReader(new InputStreamReader(
-                System.in));
-        System.out.println("Weight (kilogram): ");
-        String weightValue = measureReader.readLine();
-        HealthMeasureHistory healthMeasureHistory = new HealthMeasureHistory();
-        healthMeasureHistory.setMeasureType("weight");
-        healthMeasureHistory.setMeasureValue(weightValue);
-        healthMeasureHistory.setMeasureValueType("String-Float");
-        List<HealthMeasureHistory> newHealthMeasureHistories = UserImplementation.createUserMeasure(1, "weight", healthMeasureHistory);
-        printUserHealthMeasureHistory(newHealthMeasureHistories);
+
+        BufferedReader measureReader = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.println("Press 210 to create new Weight details");
+        System.out.println("Press 211 to create new Height details");
+        System.out.println("Press 212 to create new BMI details");
+        System.out.println("Press 213 to create new Systolic Bloodpressure details");
+        System.out.println("Press 214 to create new Diastolic Bloodpressure details");
+        String createMeasureChoice = measureReader.readLine();
+        switch (createMeasureChoice) {
+            case "210":
+                System.out.println("Weight (kilogram): ");
+                String createWeightValue = measureReader.readLine();
+                HealthMeasureHistory weightHealthMeasureHistory = new HealthMeasureHistory();
+                weightHealthMeasureHistory.setMeasureType("weight");
+                weightHealthMeasureHistory.setMeasureValue(createWeightValue);
+                weightHealthMeasureHistory.setMeasureValueType("String-Float");
+                List<HealthMeasureHistory> newWeightHealthMeasureHistories = UserImplementation.createUserMeasure(uId, "weight", weightHealthMeasureHistory);
+                printUserHealthMeasureHistory(newWeightHealthMeasureHistories);
+                break;
+            case "211":
+                System.out.println("Height (meters): ");
+                String createHeightValue = measureReader.readLine();
+                HealthMeasureHistory heightHealthMeasureHistory = new HealthMeasureHistory();
+                heightHealthMeasureHistory.setMeasureType("height");
+                heightHealthMeasureHistory.setMeasureValue(createHeightValue);
+                heightHealthMeasureHistory.setMeasureValueType("String-Float");
+                List<HealthMeasureHistory> newHeightHealthMeasureHistories = UserImplementation.createUserMeasure(uId, "height", heightHealthMeasureHistory);
+                printUserHealthMeasureHistory(newHeightHealthMeasureHistories);
+                break;
+            case "212":
+                System.out.println("BMI: ");
+                String createBMIValue = measureReader.readLine();
+                HealthMeasureHistory bmiHealthMeasureHistory = new HealthMeasureHistory();
+                bmiHealthMeasureHistory.setMeasureType("bmi");
+                bmiHealthMeasureHistory.setMeasureValue(createBMIValue);
+                bmiHealthMeasureHistory.setMeasureValueType("String-Float");
+                List<HealthMeasureHistory> newBMIHealthMeasureHistories = UserImplementation.createUserMeasure(uId, "bmi", bmiHealthMeasureHistory);
+                printUserHealthMeasureHistory(newBMIHealthMeasureHistories);
+                break;
+            case "213":
+                System.out.println("Systolic Bloodpressure: ");
+                String createSysBPValue = measureReader.readLine();
+                HealthMeasureHistory sysBPHealthMeasureHistory = new HealthMeasureHistory();
+                sysBPHealthMeasureHistory.setMeasureType("systolic-bloodpressure");
+                sysBPHealthMeasureHistory.setMeasureValue(createSysBPValue);
+                sysBPHealthMeasureHistory.setMeasureValueType("String-Float");
+                List<HealthMeasureHistory> newSysBPHealthMeasureHistories = UserImplementation.createUserMeasure(uId, "systolic-bloodpressure", sysBPHealthMeasureHistory);
+                printUserHealthMeasureHistory(newSysBPHealthMeasureHistories);
+                break;
+            case "214":
+                System.out.println("Diastolic Bloodpressure: ");
+                String createDiaBPValue = measureReader.readLine();
+                HealthMeasureHistory diaBPHealthMeasureHistory = new HealthMeasureHistory();
+                diaBPHealthMeasureHistory.setMeasureType("diastolic-bloodpressure");
+                diaBPHealthMeasureHistory.setMeasureValue(createDiaBPValue);
+                diaBPHealthMeasureHistory.setMeasureValueType("String-Float");
+                List<HealthMeasureHistory> newDiaBPHealthMeasureHistories = UserImplementation.createUserMeasure(uId, "diastolic-bloodpressure", diaBPHealthMeasureHistory);
+                printUserHealthMeasureHistory(newDiaBPHealthMeasureHistories);
+                break;
+            default:
+                break;
+        }
     }
 
-    public static void updateUserMeasure() throws Exception {
+    public static void updateUserMeasure(int uId) throws Exception {
         System.out.println("*********************************************");
-        System.out.println("             Update New Measure              ");
+        System.out.println("                Update Measure               ");
         System.out.println("*********************************************");
-        BufferedReader measureReader = new BufferedReader(new InputStreamReader(
-                System.in));
-        System.out.println("Weight (kilogram): ");
-        String weightValue = measureReader.readLine();
-        HealthMeasureHistory healthMeasureHistory = new HealthMeasureHistory();
-        healthMeasureHistory.setMeasureType("weight");
-        healthMeasureHistory.setMeasureValue(weightValue);
-        healthMeasureHistory.setMeasureValueType("String-Float");
-        List<HealthMeasureHistory> newHealthMeasureHistories = UserImplementation.updateUserMeasure(1, "weight", healthMeasureHistory, 1);
-        printUserHealthMeasureHistory(newHealthMeasureHistories);
+        BufferedReader measureReader = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.println("Press 2210 to update Weight details");
+        System.out.println("Press 2211 to update Height details");
+        System.out.println("Press 2212 to update BMI details");
+        System.out.println("Press 2213 to update Systolic Bloodpressure details");
+        System.out.println("Press 2214 to update Diastolic Bloodpressure details");
+        String updateMeasureChoice = measureReader.readLine();
+        System.out.println("Enter Health MeasureHistory Id: ");
+        String updateMeasureId = measureReader.readLine();
+        switch (updateMeasureChoice) {
+            case "2210":
+                System.out.println("Weight (kilogram): ");
+                String updateWeightValue = measureReader.readLine();
+                HealthMeasureHistory updateWeightHealthMeasureHistory = new HealthMeasureHistory();
+                updateWeightHealthMeasureHistory.setMeasureType("weight");
+                updateWeightHealthMeasureHistory.setMeasureValue(updateWeightValue);
+                updateWeightHealthMeasureHistory.setMeasureValueType("String-Float");
+                List<HealthMeasureHistory> updateWeightHealthMeasureHistories = UserImplementation.updateUserMeasure(uId, "weight", updateWeightHealthMeasureHistory, Integer.parseInt(updateMeasureId));
+                printUserHealthMeasureHistory(updateWeightHealthMeasureHistories);
+                break;
+            case "2211":
+                System.out.println("Height (meters): ");
+                String updateHeightValue = measureReader.readLine();
+                HealthMeasureHistory updateHeightHealthMeasureHistory = new HealthMeasureHistory();
+                updateHeightHealthMeasureHistory.setMeasureType("height");
+                updateHeightHealthMeasureHistory.setMeasureValue(updateHeightValue);
+                updateHeightHealthMeasureHistory.setMeasureValueType("String-Float");
+                List<HealthMeasureHistory> updateHeightHealthMeasureHistories = UserImplementation.updateUserMeasure(uId, "height", updateHeightHealthMeasureHistory, Integer.parseInt(updateMeasureId));
+                printUserHealthMeasureHistory(updateHeightHealthMeasureHistories);
+                break;
+            case "2212":
+                System.out.println("BMI: ");
+                String updateBMIValue = measureReader.readLine();
+                HealthMeasureHistory updateBMIHealthMeasureHistory = new HealthMeasureHistory();
+                updateBMIHealthMeasureHistory.setMeasureType("bmi");
+                updateBMIHealthMeasureHistory.setMeasureValue(updateBMIValue);
+                updateBMIHealthMeasureHistory.setMeasureValueType("String-Float");
+                List<HealthMeasureHistory> updateBMIHealthMeasureHistories = UserImplementation.updateUserMeasure(uId, "bmi", updateBMIHealthMeasureHistory, Integer.parseInt(updateMeasureId));
+                printUserHealthMeasureHistory(updateBMIHealthMeasureHistories);
+                break;
+            case "2213":
+                System.out.println("Systolic Bloodpressure: ");
+                String updateSysBPValue = measureReader.readLine();
+                HealthMeasureHistory updateSysBPHealthMeasureHistory = new HealthMeasureHistory();
+                updateSysBPHealthMeasureHistory.setMeasureType("systolic-bloodpressure");
+                updateSysBPHealthMeasureHistory.setMeasureValue(updateSysBPValue);
+                updateSysBPHealthMeasureHistory.setMeasureValueType("String-Float");
+                List<HealthMeasureHistory> updateSysBPHealthMeasureHistories = UserImplementation.updateUserMeasure(uId, "systolic-bloodpressure", updateSysBPHealthMeasureHistory, Integer.parseInt(updateMeasureId));
+                printUserHealthMeasureHistory(updateSysBPHealthMeasureHistories);
+                break;
+            case "2214":
+                System.out.println("Diastolic Bloodpressure: ");
+                String updateDiaBPValue = measureReader.readLine();
+                HealthMeasureHistory updateDiaBPHealthMeasureHistory = new HealthMeasureHistory();
+                updateDiaBPHealthMeasureHistory.setMeasureType("diastolic-bloodpressure");
+                updateDiaBPHealthMeasureHistory.setMeasureValue(updateDiaBPValue);
+                updateDiaBPHealthMeasureHistory.setMeasureValueType("String-Float");
+                List<HealthMeasureHistory> updateDiaBPHealthMeasureHistories = UserImplementation.updateUserMeasure(uId, "diastolic-bloodpressure", updateDiaBPHealthMeasureHistory, Integer.parseInt(updateMeasureId));
+                printUserHealthMeasureHistory(updateDiaBPHealthMeasureHistories);
+                break;
+            default:
+                break;
+        }
     }
 
     //**********************************************************************************************************************
@@ -351,7 +478,7 @@ public class UserInterface {
         System.out.println("*********************************************");
         System.out.println("             THOUGHT OF THE DAY              ");
         System.out.println("---------------------------------------------");
-        System.out.println(user.getQuote());
+//        System.out.println(user.getQuote());
         System.out.println("*********************************************");
         System.out.println("Details for user with UID : " + user.getuId());
         System.out.println("---------------------------------------------");
