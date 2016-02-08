@@ -33,11 +33,11 @@ public class UserImplementation {
     private static ObjectMapper userMapper = new ObjectMapper();
 
     private static URI getBaseBusinessURI() {
-        return UriBuilder.fromUri("http://127.0.1.1:8003/business/user").build();
+        return UriBuilder.fromUri("http://business-logic-service.herokuapp.com/business/user").build();
     }
 
     private static URI getBaseProcessURI() {
-        return UriBuilder.fromUri("http://127.0.1.1:8002/process/user").build();
+        return UriBuilder.fromUri("http://process-centric-service.herokuapp.com/process/user").build();
     }
 
     /*  Request to obtain all the users and their details in the list.
