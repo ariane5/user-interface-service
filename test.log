@@ -1,0 +1,890 @@
+*********************************************
+    WELCOME TO HEART MONITORING SYSTEM!!!!   
+*********************************************
+Press 1 to View the list of all the users (Admin View).
+Press 2 to Log in with your id.
+Press 3 to Create a new user.
+Press 4 to Delete a user.
+1
+List of all the users: 
+*********************************************
+*********************************************
+Details for user with UID : 1
+*********************************************
+FirstName   : Jon
+LastName    : Snow
+BirthDate   : Mon Dec 21 00:00:00 CET 1981
+BloodGroup  : A+
+Address     : Winterfell, Seven Kingdoms
+---------------------------------------------
+HealthProfileId  :1
+weight : 70
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :2
+height : 1.7
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :3
+bmi : 19
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :4
+systolic-bloodpressure : 118
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :5
+diastolic-bloodpressure : 80
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+*********************************************
+Details for user with UID : 2
+*********************************************
+FirstName   : Robb
+LastName    : Stark
+BirthDate   : Sat Jan 12 00:00:00 CET 1980
+BloodGroup  : A+
+Address     : Winterfell, Seven Kingdoms
+---------------------------------------------
+HealthProfileId  :6
+weight : 75
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :7
+height : 1.7
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :8
+bmi : 36
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :9
+systolic-bloodpressure : 142
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :10
+diastolic-bloodpressure : 89
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+*********************************************
+Details for user with UID : 3
+*********************************************
+FirstName   : Sansa
+LastName    : Stark
+BirthDate   : Wed Jan 12 00:00:00 CET 1983
+BloodGroup  : AB+
+Address     : Winterfell, Seven Kingdoms
+---------------------------------------------
+HealthProfileId  :11
+weight : 60
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :12
+height : 1.7
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :13
+bmi : 20
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :14
+systolic-bloodpressure : 89
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :15
+diastolic-bloodpressure : 59
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+*********************************************
+Details for user with UID : 4
+*********************************************
+FirstName   : Arya
+LastName    : Stark
+BirthDate   : Sat Jan 12 00:00:00 CET 1985
+BloodGroup  : B+
+Address     : Winterfell, Seven Kingdoms
+---------------------------------------------
+HealthProfileId  :16
+weight : 58
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :17
+height : 1.6
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :18
+bmi : 21
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :19
+systolic-bloodpressure : 121
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :20
+diastolic-bloodpressure : 81
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+*********************************************
+Details for user with UID : 5
+*********************************************
+FirstName   : Brandon
+LastName    : Stark
+BirthDate   : Sat Jan 12 00:00:00 CET 1985
+BloodGroup  : O+
+Address     : Winterfell, Seven Kingdoms
+---------------------------------------------
+HealthProfileId  :21
+weight : 59
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :22
+height : 1.7
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :23
+bmi : 26
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :24
+systolic-bloodpressure : 119
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :25
+diastolic-bloodpressure : 80
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+*********************************************
+Details for user with UID : 6
+*********************************************
+FirstName   : Rickson
+LastName    : Stark
+BirthDate   : Mon Jan 12 00:00:00 CET 1987
+BloodGroup  : AB+
+Address     : Winterfell, Seven Kingdoms
+---------------------------------------------
+HealthProfileId  :26
+weight : 59
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :27
+height : 1.4
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :28
+bmi : 17
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :29
+systolic-bloodpressure : 60
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :30
+diastolic-bloodpressure : 39
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+*********************************************
+Details for user with UID : 7
+*********************************************
+FirstName   : Cersi
+LastName    : Lannister
+BirthDate   : Sat Feb 14 00:00:00 CET 1970
+BloodGroup  : B+
+Address     : King's Landing, Seven Kingdoms
+---------------------------------------------
+HealthProfileId  :31
+weight : 70
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :32
+height : 1.8
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :33
+bmi : 32
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :34
+systolic-bloodpressure : 145
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :35
+diastolic-bloodpressure : 92
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+Press 10 to Log in a user.
+Press 11 to Delete a user.
+10
+Enter User Id: 
+1
+*********************************************
+             THOUGHT OF THE DAY              
+---------------------------------------------
+They enjoy giving form to ideas. If designers were made of ideas, they'd be their own clients.
+*********************************************
+Details for user with UID : 1
+---------------------------------------------
+FirstName   : Jon
+LastName    : Snow
+BirthDate   : Mon Dec 21 00:00:00 CET 1981
+BloodGroup  : A+
+Address     : Winterfell, Seven Kingdoms
+---------------------------------------------
+HealthProfileId  :1
+weight : 70
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :2
+height : 1.7
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :3
+bmi : 19
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :4
+systolic-bloodpressure : 118
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :5
+diastolic-bloodpressure : 80
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+Your Goals must be: 
+	Your blood pressure is normal so make sure you maintain this in the future as well.
+	You are in good shape. Maintain your diet and stay healthy.
+---------------------------------------------
+Suggested Activities: 
+	Add 10-minute mini-workouts, and do these throughout your busy day. For example, you can jog in place or do calisthenics for 10 minutes. Three 10-minute mini-workouts equal 30 minutes of daily exercise in little bits of time you won't miss.
+	Basketball, volleyball, and softball leagues offer camaraderie and competition. Tennis and racquetball require you to make an appointment for matches, holding you accountable for showing up.
+
+---------------------------------------------
+You should try this new recepie... 
+BALANCED GREEN JUICE
+To make this, all you need is: 
+	1/2 cup (4 ounces) fresh cucumber juice from about 1 medium cucumber
+	3 tablespoons (1 1/2 ounces) fresh kale juice from about 4 medium leaves kale
+	1 tablespoon plus 1 teaspoon (2/3 ounce) fresh cilantro juice from about 1 packed cup cilantro leaves and stems
+	1/2 cup (4 ounces) fresh apple juice from about 1 large apple, cored and quartered
+	1 tablespoon (1/2 ounce) fresh ginger juice from a about 1 1/2-inch piece ginger
+	1 tablespoon plus 2 teaspoons (5/6 ounce) fresh lime juice from 1 to 2 limes, peeled
+	1/2 cup (4 ounces) fresh celery juice from about 3 medium celery stalks
+This recepie is good for your health since it is...
+	Vegan
+	Vegetarian
+	Dairy-Free
+	Gluten-Free
+	Egg-Free
+	Peanut-Free
+	Tree-Nut-Free
+	Soy-Free
+	Fish-Free
+	Shellfish-Free
+You should definitely try this!!!!
+*********************************************
+Exiting from Heart Monitoring System...
+
+
+*********************************************
+    WELCOME TO HEART MONITORING SYSTEM!!!!   
+*********************************************
+Press 1 to View the list of all the users (Admin View).
+Press 2 to Log in with your id.
+Press 3 to Create a new user.
+Press 4 to Delete a user.
+2
+Enter the user id: 
+7
+*********************************************
+             THOUGHT OF THE DAY              
+---------------------------------------------
+They enjoy giving form to ideas. If designers were made of ideas, they'd be their own clients.
+*********************************************
+Details for user with UID : 7
+---------------------------------------------
+FirstName   : Cersi
+LastName    : Lannister
+BirthDate   : Sat Feb 14 00:00:00 CET 1970
+BloodGroup  : B+
+Address     : King's Landing, Seven Kingdoms
+---------------------------------------------
+HealthProfileId  :31
+weight : 70
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :32
+height : 1.8
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :33
+bmi : 32
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :34
+systolic-bloodpressure : 145
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :35
+diastolic-bloodpressure : 92
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+Your Goals must be: 
+	You have high blood pressure clinically termed as Hypertension. Don't worry! Hypertension is not a new topic now a days. But make sure you see your doctor.
+	You should make sure that you decease your weight at least by 5 kilos at the end of the month.
+---------------------------------------------
+Suggested Activities: 
+	Resistance training can lower blood pressure by 2 to 4 percent, but if you have uncontrolled hypertension (greater than or equal to 160/100), you should not lift weights. 
+	Avoid competitive exercises that include bursts of intense exertion. Easy aerobic exercise such as walking is good for people of all blood pressure levels.
+---------------------------------------------
+You should try this new recepie... 
+LOW FAT CHRISTMAS PUDDING
+To make this, all you need is: 
+	* 1tsp mixed spice
+	* 115g (4oz) grated carrot
+	* 4tbsps brandy or rum for reheating
+	* 50g (2oz) fresh breadcrumbs
+	* 75g (3oz) cherries
+	* 2tbsp molasses or cane sugar syrup
+	* 75g (3oz) sultanas
+	* 4tbsps skimmed milk
+	* â½ tsp ground cinnamon
+	* 2 eggs beaten
+	* 4tbsp brandy, rum or beer
+	* 75g (3oz) currants
+	* 75g (3oz) plain flour
+	* 50g (2oz) brown sugar
+	* grated zest of â½ lemon and orange
+	* 115g (4oz) raisins
+	* 115g (4oz) grated apple
+	* 2 tsps gravy browning
+	* 1tbsp lemon juice
+This recepie is good for your health since it is...
+	Vegetarian
+	Peanut-Free
+	Tree-Nut-Free
+	Soy-Free
+	Fish-Free
+	Shellfish-Free
+You should definitely try this!!!!
+---------------------------------------------
+Press 20 to Edit the user personal info
+Press 21 to Create new measure detail
+Press 22 to View measure detail
+22
+Enter the measure type: 
+bmi
+---------------------------------------------
+HealthMeasureHistoryId  :33
+bmi : 32
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+Press 220 to view the details of a particular measure
+Press 221 to update a particular measure
+220
+Enter Health MeasureHistory Id: 
+33
+---------------------------------------------
+HealthMeasureHistoryId  :33
+bmi : 32
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+*********************************************
+Exiting from Heart Monitoring System...
+
+*********************************************
+    WELCOME TO HEART MONITORING SYSTEM!!!!   
+*********************************************
+Press 1 to View the list of all the users (Admin View).
+Press 2 to Log in with your id.
+Press 3 to Create a new user.
+Press 4 to Delete a user.
+3
+*********************************************
+              Create New User                
+*********************************************
+Personal Details
+---------------------------------------------
+FirstName: 
+Robert
+LastName: 
+Baratheon
+BirthDate (DD/MM/YYYY): 
+12/09/1980
+BloodGroup: 
+A+
+Address: 
+King's Landing
+---------------------------------------------
+Health Profile
+---------------------------------------------
+Weight (kilogram): 
+90
+Height (meters): 
+1.6
+BMI: 
+36
+Systolic Bloodpressure: 
+200
+Diastolic Bloodpressure: 
+101
+User successfully Created!!!
+*********************************************
+Details for user with UID : 51
+*********************************************
+FirstName   : Robert
+LastName    : Baratheon
+BirthDate   : Fri Sep 12 00:00:00 CEST 1980
+BloodGroup  : A+
+Address     : King's Landing
+---------------------------------------------
+HealthProfileId  :51
+weight : 90
+Date Registered  :Tue Feb 09 21:09:21 CET 2016
+---------------------------------------------
+HealthProfileId  :52
+height : 1.6
+Date Registered  :Tue Feb 09 21:09:21 CET 2016
+---------------------------------------------
+HealthProfileId  :53
+bmi : 36
+Date Registered  :Tue Feb 09 21:09:21 CET 2016
+---------------------------------------------
+HealthProfileId  :54
+systolic-bloodpressure : 200
+Date Registered  :Tue Feb 09 21:09:21 CET 2016
+---------------------------------------------
+HealthProfileId  :55
+diastolic-bloodpressure : 101
+Date Registered  :Tue Feb 09 21:09:21 CET 2016
+---------------------------------------------
+Press 30 to go to user profile
+30
+*********************************************
+             THOUGHT OF THE DAY              
+---------------------------------------------
+They enjoy giving form to ideas. If designers were made of ideas, they'd be their own clients.
+*********************************************
+Details for user with UID : 51
+---------------------------------------------
+FirstName   : Robert
+LastName    : Baratheon
+BirthDate   : Thu Sep 11 02:00:00 CEST 1980
+BloodGroup  : A+
+Address     : King's Landing
+---------------------------------------------
+HealthProfileId  :51
+weight : 90
+Date Registered  :Tue Feb 09 01:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :52
+height : 1.6
+Date Registered  :Tue Feb 09 01:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :53
+bmi : 36
+Date Registered  :Tue Feb 09 01:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :54
+systolic-bloodpressure : 200
+Date Registered  :Tue Feb 09 01:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :55
+diastolic-bloodpressure : 101
+Date Registered  :Tue Feb 09 01:00:00 CET 2016
+---------------------------------------------
+Your Goals must be: 
+	You have extremely high blood pressure. You must see the doctor!
+	You should seriously exercise more and eat healthy food!!!
+---------------------------------------------
+Suggested Activities: 
+	You must urgently see your doctor. Or you can contact the nearest hospital.  Call 0461 903111.
+---------------------------------------------
+You should try this new recepie... 
+CHICKEN NOODLE GOULASH (ABS DIET)
+To make this, all you need is: 
+	2 cups frozen mixed vegetables
+	1 (10 3/4 oz) can low-fat cream of mushroom soup
+	2 tbsps tomato paste
+	1 tsp paprika
+	2 cups water
+	1 (6 oz) package egg noodles
+	2 (8 oz) cans white meat chicken , cubed
+This recepie is good for your health since it is...
+	Peanut-Free
+	Tree-Nut-Free
+	Soy-Free
+	Fish-Free
+	Shellfish-Free
+You should definitely try this!!!!
+
+*********************************************
+    WELCOME TO HEART MONITORING SYSTEM!!!!   
+*********************************************
+Press 1 to View the list of all the users (Admin View).
+Press 2 to Log in with your id.
+Press 3 to Create a new user.
+Press 4 to Delete a user.
+2
+Enter the user id: 
+4
+*********************************************
+             THOUGHT OF THE DAY              
+---------------------------------------------
+Usage is like oxygen for ideas.
+*********************************************
+Details for user with UID : 4
+---------------------------------------------
+FirstName   : Arya
+LastName    : Stark
+BirthDate   : Sat Jan 12 00:00:00 CET 1985
+BloodGroup  : B+
+Address     : Winterfell, Seven Kingdoms
+---------------------------------------------
+HealthProfileId  :16
+weight : 58
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :17
+height : 1.6
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :18
+bmi : 21
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :19
+systolic-bloodpressure : 121
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :20
+diastolic-bloodpressure : 81
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+Your Goals must be: 
+	Your blood pressure is a little higher than the normal.  Don't worry but start exercising.
+	You are in good shape. Maintain your diet and stay healthy.
+---------------------------------------------
+Suggested Activities: 
+	Strength training for hypertension management works best in combination with aerobic exercise. You can use weight machines at the gym, buy dumbbells to use at home, or use resistance bands. Regular, moderate-strength exercises will keep your muscles toned but not bulky.
+	Many people have never heard of isometric exercise, yet it can be very effective for reducing blood pressure. In fact, simple handgrip exercises can lower your systolic (top) number by a whopping 10 points!
+---------------------------------------------
+You should try this new recepie... 
+BALANCED GREEN JUICE
+To make this, all you need is: 
+	1/2 cup (4 ounces) fresh cucumber juice from about 1 medium cucumber
+	3 tablespoons (1 1/2 ounces) fresh kale juice from about 4 medium leaves kale
+	1 tablespoon plus 1 teaspoon (2/3 ounce) fresh cilantro juice from about 1 packed cup cilantro leaves and stems
+	1/2 cup (4 ounces) fresh apple juice from about 1 large apple, cored and quartered
+	1 tablespoon (1/2 ounce) fresh ginger juice from a about 1 1/2-inch piece ginger
+	1 tablespoon plus 2 teaspoons (5/6 ounce) fresh lime juice from 1 to 2 limes, peeled
+	1/2 cup (4 ounces) fresh celery juice from about 3 medium celery stalks
+This recepie is good for your health since it is...
+	Vegan
+	Vegetarian
+	Dairy-Free
+	Gluten-Free
+	Egg-Free
+	Peanut-Free
+	Tree-Nut-Free
+	Soy-Free
+	Fish-Free
+	Shellfish-Free
+You should definitely try this!!!!
+---------------------------------------------
+Press 20 to Edit the user personal info
+Press 21 to Create new measure detail
+Press 22 to View measure detail
+20
+*********************************************
+          Edit User Personal Details         
+*********************************************
+---------------------------------------------
+FirstName: 
+Aryaa
+LastName: 
+
+BirthDate (DD/MM/YYYY): 
+
+BloodGroup: 
+
+Address: 
+
+
+*********************************************
+Details for user with UID : 4
+*********************************************
+FirstName   : Aryaa
+LastName    : Stark
+BirthDate   : Sat Jan 12 00:00:00 CET 1985
+BloodGroup  : B+
+Address     : Winterfell, Seven Kingdoms
+---------------------------------------------
+User Successfully Updated!!!!
+*********************************************
+Exiting from Heart Monitoring System...
+
+
+*********************************************
+    WELCOME TO HEART MONITORING SYSTEM!!!!   
+*********************************************
+Press 1 to View the list of all the users (Admin View).
+Press 2 to Log in with your id.
+Press 3 to Create a new user.
+Press 4 to Delete a user.
+4
+Enter the user id: 
+51
+Successfully deleted user with id: 51
+*********************************************
+Exiting from Heart Monitoring System...
+
+*********************************************
+    WELCOME TO HEART MONITORING SYSTEM!!!!   
+*********************************************
+Press 1 to View the list of all the users (Admin View).
+Press 2 to Log in with your id.
+Press 3 to Create a new user.
+Press 4 to Delete a user.
+2
+Enter the user id: 
+6
+*********************************************
+             THOUGHT OF THE DAY              
+---------------------------------------------
+Usage is like oxygen for ideas.
+*********************************************
+Details for user with UID : 6
+---------------------------------------------
+FirstName   : Rickson
+LastName    : Stark
+BirthDate   : Mon Jan 12 00:00:00 CET 1987
+BloodGroup  : AB+
+Address     : Winterfell, Seven Kingdoms
+---------------------------------------------
+HealthProfileId  :26
+weight : 59
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :27
+height : 1.4
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :28
+bmi : 17
+Date Registered  :Tue Feb 09 01:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :29
+systolic-bloodpressure : 60
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :30
+diastolic-bloodpressure : 39
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+Your Goals must be: 
+	You have extremely low blood pressure. You must see the doctor!
+	You are Underweight!!! Focus on your diet.
+---------------------------------------------
+Suggested Activities: 
+	You must urgently see your doctor. Or you can contact the nearest hospital.  Call 0461 903111.
+---------------------------------------------
+You should try this new recepie... 
+EVERYTHING BUT THE KITCHEN SINK HIGH PROTEIN POTATO CAKES
+To make this, all you need is: 
+	~2 cups high protein garlic mashed potatoes
+	~1 cup veggie chickpea curry (or any veggie leftovers really!)
+This recepie is good for your health since it is...
+	Vegetarian
+	Gluten-Free
+	Egg-Free
+	Peanut-Free
+	Tree-Nut-Free
+	Soy-Free
+	Fish-Free
+	Shellfish-Free
+You should definitely try this!!!!
+---------------------------------------------
+Press 20 to Edit the user personal info
+Press 21 to Create new measure detail
+Press 22 to View measure detail
+21
+*********************************************
+             Create New Measure              
+*********************************************
+Press 210 to create new Weight details
+Press 211 to create new Height details
+Press 212 to create new BMI details
+Press 213 to create new Systolic Bloodpressure details
+Press 214 to create new Diastolic Bloodpressure details
+212
+BMI: 
+16
+---------------------------------------------
+HealthMeasureHistoryId  :28
+bmi : 17
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthMeasureHistoryId  :56
+bmi : 17
+Date Registered  :Tue Feb 09 01:00:00 CET 2016
+---------------------------------------------
+HealthMeasureHistoryId  :57
+bmi : 16
+Date Registered  :Tue Feb 09 01:00:00 CET 2016
+*********************************************
+             THOUGHT OF THE DAY              
+---------------------------------------------
+Usage is like oxygen for ideas.
+*********************************************
+Details for user with UID : 6
+---------------------------------------------
+FirstName   : Rickson
+LastName    : Stark
+BirthDate   : Mon Jan 12 00:00:00 CET 1987
+BloodGroup  : AB+
+Address     : Winterfell, Seven Kingdoms
+---------------------------------------------
+HealthProfileId  :26
+weight : 59
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :27
+height : 1.4
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :28
+bmi : 16
+Date Registered  :Tue Feb 09 01:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :29
+systolic-bloodpressure : 60
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :30
+diastolic-bloodpressure : 39
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+Your Goals must be: 
+	You have extremely low blood pressure. You must see the doctor!
+	You are Underweight!!! Focus on your diet.
+---------------------------------------------
+Suggested Activities: 
+	You must urgently see your doctor. Or you can contact the nearest hospital.  Call 0461 903111.
+---------------------------------------------
+You should try this new recepie... 
+EVERYTHING BUT THE KITCHEN SINK HIGH PROTEIN POTATO CAKES
+To make this, all you need is: 
+	~2 cups high protein garlic mashed potatoes
+	~1 cup veggie chickpea curry (or any veggie leftovers really!)
+This recepie is good for your health since it is...
+	Vegetarian
+	Gluten-Free
+	Egg-Free
+	Peanut-Free
+	Tree-Nut-Free
+	Soy-Free
+	Fish-Free
+	Shellfish-Free
+You should definitely try this!!!!
+*********************************************
+Exiting from Heart Monitoring System...
+
+*********************************************
+    WELCOME TO HEART MONITORING SYSTEM!!!!   
+*********************************************
+Press 1 to View the list of all the users (Admin View).
+Press 2 to Log in with your id.
+Press 3 to Create a new user.
+Press 4 to Delete a user.
+2
+Enter the user id: 
+6
+*********************************************
+             THOUGHT OF THE DAY              
+---------------------------------------------
+Usage is like oxygen for ideas.
+*********************************************
+Details for user with UID : 6
+---------------------------------------------
+FirstName   : Rickson
+LastName    : Stark
+BirthDate   : Mon Jan 12 00:00:00 CET 1987
+BloodGroup  : AB+
+Address     : Winterfell, Seven Kingdoms
+---------------------------------------------
+HealthProfileId  :26
+weight : 59
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :27
+height : 1.4
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :28
+bmi : 16
+Date Registered  :Tue Feb 09 01:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :29
+systolic-bloodpressure : 60
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthProfileId  :30
+diastolic-bloodpressure : 39
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+Your Goals must be: 
+	You have extremely low blood pressure. You must see the doctor!
+	You are Underweight!!! Focus on your diet.
+---------------------------------------------
+Suggested Activities: 
+	You must urgently see your doctor. Or you can contact the nearest hospital.  Call 0461 903111.
+---------------------------------------------
+You should try this new recepie... 
+EVERYTHING BUT THE KITCHEN SINK HIGH PROTEIN POTATO CAKES
+To make this, all you need is: 
+	~2 cups high protein garlic mashed potatoes
+	~1 cup veggie chickpea curry (or any veggie leftovers really!)
+This recepie is good for your health since it is...
+	Vegetarian
+	Gluten-Free
+	Egg-Free
+	Peanut-Free
+	Tree-Nut-Free
+	Soy-Free
+	Fish-Free
+	Shellfish-Free
+You should definitely try this!!!!
+---------------------------------------------
+Press 20 to Edit the user personal info
+Press 21 to Create new measure detail
+Press 22 to View measure detail
+22
+Enter the measure type: 
+bmi
+---------------------------------------------
+HealthMeasureHistoryId  :28
+bmi : 17
+Date Registered  :Mon Jan 11 00:00:00 CET 2016
+---------------------------------------------
+HealthMeasureHistoryId  :56
+bmi : 17
+Date Registered  :Tue Feb 09 01:00:00 CET 2016
+---------------------------------------------
+HealthMeasureHistoryId  :57
+bmi : 16
+Date Registered  :Tue Feb 09 01:00:00 CET 2016
+---------------------------------------------
+Press 220 to view the details of a particular measure
+Press 221 to update a particular measure
+221
+*********************************************
+                Update Measure               
+*********************************************
+Press 2210 to update Weight details
+Press 2211 to update Height details
+Press 2212 to update BMI details
+Press 2213 to update Systolic Bloodpressure details
+Press 2214 to update Diastolic Bloodpressure details
+2212
+Enter Health MeasureHistory Id: 
+56
+BMI: 
+15
+---------------------------------------------
+HealthMeasureHistoryId  :56
+bmi : 15
+Date Registered  :Tue Feb 09 01:00:00 CET 2016
+*********************************************
+Exiting from Heart Monitoring System...

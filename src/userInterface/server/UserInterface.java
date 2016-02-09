@@ -289,7 +289,6 @@ public class UserInterface {
         System.out.println("---------------------------------------------");
         System.out.println("FirstName: ");
         String updatedFirstName = userUpdate.readLine();
-        System.out.println(updatedFirstName);
         System.out.println("LastName: ");
         String updatedLastName = userUpdate.readLine();
         System.out.println(updatedLastName);
