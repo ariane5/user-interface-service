@@ -1,6 +1,8 @@
 # HEART MONITORING SYSTEM
 #### BISHRUTI SIKU
 
+[Click Here to View the Report](https://github.com/introsde-final-project/user-interface-service/blob/master/Report.pdf)
+
 ### INTRODUCTION
 
 Heart Monitoring System is a console application which helps its users to track the status of their heart. This application obtains the current health status from the user and based on the information obtained, it automatically sets up goals, suggests activities to achieve that goal and recommends appropriate food for them. In addition to that, whenever the user logs into their account, they are always welcomed by a ‘Thought of the Day’ which is a quotation message. 
@@ -25,6 +27,8 @@ If the user is existing, then they can view their profile where they are welcome
 
 ### SYSTEM ARCHITECTURE
 
+![alt text](https://github.com/introsde-final-project/user-interface-service/blob/master/systemArchitecture.PNG)
+
 #### [External Adapter Service](https://github.com/introsde-final-project/external-adapter-service)
 
 External Adapter Service is responsible to interact with external services.  In fact, this service creates a link between our application and Edamam - Eat Better! and Quotes on Design. 
@@ -46,6 +50,10 @@ Storage Service serves as a junction where all the required data for the applica
 
 #### [Business Logic Service](https://github.com/introsde-final-project/business-logic-service)
 Business Logic Service implements all the logics that are used in this application. It obtains data from Storage Service through JSON object in RESTful APIs, manipulates them to obtain meaningful response and pass it to the User Interface Service as a JSON object in RESTful API. The chief logic that is implemented in this service is to automatically recommend appropriate Goal, Activities, Food with respect to Blood Pressure and BMI of the user. Some of the logics in the application is shown in the tables below.
+
+![alt text](https://github.com/introsde-final-project/user-interface-service/blob/master/bp.png) 
+
+![alt text](https://github.com/introsde-final-project/user-interface-service/blob/master/bmi.png)
 
 #### [Process Centric Service](https://github.com/introsde-final-project/process-centric-service)
 Process Centric Service handles all the requests that changes the state of this application. It obtains data from User Interface Service as a JSON object through REST and pass it to the Storage Service in the same format after performing operations that change the state of the application.
